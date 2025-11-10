@@ -5,7 +5,7 @@ import { ConsignaComponent } from './shared/components/consigna/consigna.compone
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, ConsignaComponent],
+  imports: [RouterOutlet, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

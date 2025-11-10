@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <h2>Reflection</h2>
+
+  <button class="btn btn-primary mb-3" (click)="loadImporters()">Cargar importers</button>
+
+  <div *ngIf="isLoading" class="alert alert-info">Cargando...</div>
+
+  <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+  <ul *ngIf="!isLoading && !error && importers.length > 0" class="list-group">
+    <li *ngFor="let importer of importers" class="list-group-item">
+      {{ importer }}
+    </li>
+  </ul>
+
+  <div *ngIf="!isLoading && !error && importers.length === 0" class="alert alert-warning">
+    No hay importers disponibles.
+  </div>
+</div>
